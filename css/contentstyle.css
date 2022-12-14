@@ -1,0 +1,20 @@
+.spoilerBlur {
+    color: transparent!important;
+    text-shadow: 0 0 15px #000000!important;
+    transition-property: color, text-shadow!important;
+    transition-duration: 0.5s!important;
+    transition-timing-function: ease!important;
+}
+.spoilerBlur:hover {
+    color: inherit!important;
+    text-shadow: none!important;
+}
+
+.spoilerBlurImage {
+    filter: blur(20px);
+    transition: filter .5s ease;
+}
+
+.spoilerBlurImage:hover {
+    filter: none;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove spoilers</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <img class="header__logo" src="images/logo.svg" alt="logo">
+        <h1 class="header__title">Anti Spoiler</h1>
+        <span class="header__description">Очистим контент от грязи.</span>
+    </header>
+    <main>
+        <section class="content">
+            <div class="grid">
+                <div class="grid__item">
+                    <h3 class="grid__title">Настройка типа контента</h3>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="switchImage">
+                        <label class="form-check-label" for="switchImage">Блокировать изображения</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="switchVideo">
+                        <label class="form-check-label" for="switchVideo">Блокировать видеозаписи</label>
+                    </div>
+                </div>
+                <div class="grid__item">
+                    <h3 class="grid__title">Настройка даты и ключевых слов</h3>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputKeywords">Ключевые слова</span>
+                        <input type="text" required class="form-control" id="inputKeywords" aria-describedby="inputKeywords">
+                        <button class="btn btn-success" type="button" id="addKeyword">Добавить</button>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputDate">Дата начала блокировки</span>
+                        <input type="date" class="form-control" id="inputDate" aria-describedby="basic-addon3">
+                    </div>
+                </div>
+                <div class="grid__item grid__item--keywords">
+                    <h3 class="grid__title">Список активных ключевых слов</h3>
+                    <div class="grid__list keywords">
+                    </div>
+                </div>
+                <div class="d-grid grid__item grid__item--send">
+                    <button type="button" class="btn btn-danger" id="send">Скрыть все спойлеры на странице</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/popup.js"></script>
+</body>
+</html>
